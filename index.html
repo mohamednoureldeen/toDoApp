@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap css link-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- custom css link -->
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.15.2/dist/sweetalert2.min.css
+    " rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
+<body>
+    <section class=" todo-section w-50 mx-auto  my-5">
+        <div
+        class="status-todo bg-light bg-opacity-25 p-3 rounded mb-4 shadow border d-flex align-items-center justify-content-between"
+      >
+        <div class="flex-grow-1">
+          <h1 class="h5">Todo App</h1>
+          <span class="small">keep it up! </span>
+
+          <div id="progressBar">
+            <div id="progress"></div>
+          </div>
+        </div>
+
+        <div class="status-number"><span>0</span> / <span>0</span></div>
+      </div>
+        
+        <form class="d-flex gap-2 bg-light p-5 rounded shadow input-form w-100">
+            
+            <input
+                type="text"
+                class="form-control"
+                name=""
+                id=""
+                aria-describedby="helpId"
+                placeholder="Task to be done"
+            />
+           <button
+                type="submit"
+                class="btn btn-add"
+            >
+                Add
+            </button>
+        </form>
+
+
+            <ul class="task-container bg-light mt-5 border-bottom p-4 rounded shadow ">
+               
+            </ul>
+
+        
+    </section>
+    <div class="loading d-none">
+        <span class="loader"></span>
+    </div>
+    
+    
+
+    
+
+
+
+
+
+
+    
+<!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.15.2/dist/sweetalert2.all.min.js
+"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

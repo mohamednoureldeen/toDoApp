@@ -1,0 +1,169 @@
+:root{
+    --main-color:#9361f5;
+    --secondry-color:#331a49;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family:  "Exo 2", serif;
+}
+body{
+    font-family:  "Exo 2", serif;
+    background-color:var(--main-color);
+}
+img{
+    display: block;
+    width: 100%;
+}
+.section-suptitle{
+    max-width: 500px;
+}
+.main-color{
+    color: var(--main-color) !important;
+}
+.btn-add{
+    background-color: var(--main-color);
+    color: aliceblue;
+    padding: 10px 20px;
+    border: 1px solid var(--main-color);
+}
+.btn-add:hover{
+    background-color: var(--secondry-color);
+    border: 1px solid var(--secondry-color);
+    color: #f5efef;
+}
+input:focus{
+    box-shadow: 0 0 0 0.25rem #9261f565 !important;
+
+}
+.task-container .icon{
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: aliceblue;
+    cursor: pointer;
+    
+}
+.task-container .task-name{
+    cursor: pointer;
+    position: relative;
+}
+.task-container .task-name::after{
+    content: "click to complete";
+    font-size: 10px;
+    color: var(--secondry-color);
+    background-color: rgb(180, 200, 245);
+    border-radius: 5px;
+    padding: 5px 10px;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    text-wrap: nowrap;
+    pointer-events: none;
+    opacity:0 ;
+    transition: opacity 0.3s ease-in-out;
+}
+.task-container .task-name:hover:after{
+opacity: 1;
+}
+
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+}
+.loader {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #FF3D00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+
+#progressBar {
+    height: 10px;
+    background-color: #9261f588;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  #progressBar #progress {
+    height: inherit;
+    background-color: #641df1;
+    width: 0%;
+    transition: width 0.7s;
+  }
+  
+  .status-number {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 10px;
+    background-color: #9361f5;
+    color: #fff;
+  }
+
+  @media (max-width: 900px) {
+
+    .todo-section{
+        width: 90% !important;
+    }
+ .input-form{
+     flex-direction: column;
+     gap: 10px;
+ }
+ .input-form input{
+     width: 100% !important;
+ }
+
+    .task-container {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .btn-add{
+
+        padding: 5px 10px;
+        border: 1px solid var(--main-color);
+    }
+
+}
+
+
+
